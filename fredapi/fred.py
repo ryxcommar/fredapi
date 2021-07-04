@@ -139,7 +139,7 @@ class Fred(object):
             else:
                 val = float(val)
             data[self._parse(child.get('date'))] = val
-        return pd.Series(data)
+        return pd.Series(data, name=series_id)
 
     def get_series_latest_release(self, series_id):
         """
